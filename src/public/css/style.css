@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fdfdfd;
+    font-family: system-ui;
+}
+
+header{
+    width: 100%;
+    background-color: #111;
+}
+
+nav span{
+    color: #fdfdfd;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+nav{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: #fdfdfd;
+}
+
+a:hover{
+    background-color: #222222c5;
+    border-radius: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* height: 80vh; */
+}
+
+h1{
+    padding: 10px;
+}
+
+form{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="text"]{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #5a5a5a;
+    font-size: 1em;
+}
+
+input[type="submit"]{
+    padding: 10px;
+    border-radius: 5px;
+    color: #fefefe;
+    background-color: #111;
+    border: 1px solid #5a5a5a;
+    font-size: 1em;
+
+}
+
+input[type="submit"]:hover{
+    background-color: #1d1d1d;
+}
+
+#food_image{
+    display: none;
+}
+
+#label_form{
+    padding: 7px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+section{
+    width: 100%;
+    max-width: 350px;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+}
+
+.foods{
+    width: 100%;
+    max-width: 800px;
+    min-width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-food{
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 3px #313131;
+}
+
+img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.food_info{
+    padding: 10px;
+}

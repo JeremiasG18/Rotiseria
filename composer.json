@@ -1,0 +1,15 @@
+{
+    "name": "jeremias/rotiseria",
+    "autoload": {
+        "psr-4": {
+            "Jeremias\\Rotiseria\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jeremias",
+            "email": "jeregonza194@gmail.com"
+        }
+    ],
+    "require": {}
+}
