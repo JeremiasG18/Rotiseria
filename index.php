@@ -8,9 +8,13 @@ use Jeremias\Rotiseria\controllers\AdminController;
 $user = new UserController();
 $admin = new AdminController();
 
+$data = $_SERVER['REQUEST_URI'];
+$data = explode('/', $data);
+$url = '/'.$data[1].'/'.$data[2].'/';
+
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
-        switch ($_SERVER['REQUEST_URI']) {
+        switch ($url) {
             case '/admin/createFood/':
                 require_once './src/views/createFood.php';
                 break;
@@ -23,18 +27,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 $admin->listOrders();
                 break;
 
-            case '/user/listFood/':
-                $id = isset($_GET['id']) ? $_GET['id'] : 0;
+            case '/Rotiseria/?url=user_listFood/':
                 $user->listFood();
                 break;
 
-            case '/user/createOrder/':
-                $id = isset($_GET['id']) ? $_GET['id'] : 0;
-                $user->createOrder();
-                break;
-
-            case '/user/orders/':
-                $id = isset($_GET['id']) ? $_GET['id'] : 0;
+            case '/Rotiseria/?url=user_listOrder/':
                 $user->orders();
                 break;
             default:
@@ -49,7 +46,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 $admin->createFood();
                 break;
 
-            case '/user/createOrder/':
+            case '/Rotiseria/?url=user_createOrder/':
+                // $id = isset($_GET['id']) ? $_GET['id'] : 0;
                 $user->createOrder();
                 break;
                 

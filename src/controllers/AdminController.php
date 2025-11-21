@@ -12,6 +12,12 @@ class AdminController extends Conexion {
         $precio = isset($_POST['price']) ? $_POST['price'] : '';
 
         $img = $_FILES['food_image'];
+        if (empty($img)){
+            $error = "La imagen es obligatoria";
+            require_once './src/views/createFood.php';
+            // exit;
+            return;
+        }
 
         $directorio = "src/uploads/";
         $rutaFinal = "";
