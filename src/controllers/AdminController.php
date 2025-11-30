@@ -10,8 +10,6 @@ class AdminController extends Conexion {
     public function createFood() {
         $nombre =  isset($_POST['food_name']) ? $_POST['food_name'] : '';
         $precio = isset($_POST['price']) ? $_POST['price'] : '';
-
-
         $img = isset($_FILES['food_image']) ? $_FILES['food_image'] : '';
 
         if ($nombre === '' || $precio === '' || $img === '' || $img['size'] <= 0) {

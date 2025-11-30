@@ -4,8 +4,8 @@ require_once './src/views/templates/header.php';
 
 ?>
 
+<h1>Ordenes</h1>
 <?php if ($respuesta) : ?>
-    <h1>Ordenes</h1>
     <table>
         <thead>
             <tr>
@@ -36,13 +36,10 @@ require_once './src/views/templates/header.php';
         </tbody>
     </table>
 <?php
+
 else :
     echo 'No hay ordenes';
 endif;
-
-?>
-
-<?php 
 
 require_once './src/views/templates/footer.php';
 
