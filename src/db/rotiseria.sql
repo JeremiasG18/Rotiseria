@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2025 a las 16:15:52
+-- Tiempo de generación: 30-11-2025 a las 16:04:23
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -44,7 +44,8 @@ INSERT INTO `comida` (`id`, `nombre`, `precio`, `foto_url`) VALUES
 (6, 'Milanesa Napolitana con Pure de papa', 25000.00, 'src/uploads/file_69173b813c6287.51635407_GHX4HJD7FRHQVN7UN7P7TIPJ34.png'),
 (7, 'Lomito Arabe', 13000.00, 'src/uploads/file_69174de8d03b35.57269682_u-aUfp64d_1200x630__1.jpg'),
 (8, 'Hamburguesa Completa', 10000.00, 'src/uploads/file_69174e4bcb9761.95400923_IMG1_ECOM-1.jpg'),
-(10, 'Coca-Cola 1.5', 3000.00, 'src/uploads/file_69175a635e52e2.74416839_77908950004301-80602de5b61cff11bb15890782195412-1024-1024.png');
+(10, 'Coca-Cola 1.5', 3000.00, 'src/uploads/file_69175a635e52e2.74416839_77908950004301-80602de5b61cff11bb15890782195412-1024-1024.png'),
+(17, 'Gaseosa Fanta 1.5', 2000.00, 'src/uploads/file_692c7b9c82d4e8.43671114_Gaseosa-Naranja-Vidrio-Retornable.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,6 +58,17 @@ CREATE TABLE `ordenes` (
   `mesa` int(11) DEFAULT NULL,
   `id_comida` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `ordenes`
+--
+
+INSERT INTO `ordenes` (`id`, `mesa`, `id_comida`) VALUES
+(1, 1, 4),
+(2, 1, 5),
+(3, 1, 10),
+(4, 2, 7),
+(5, 2, 8);
 
 --
 -- Índices para tablas volcadas
@@ -83,13 +95,13 @@ ALTER TABLE `ordenes`
 -- AUTO_INCREMENT de la tabla `comida`
 --
 ALTER TABLE `comida`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `ordenes`
 --
 ALTER TABLE `ordenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
