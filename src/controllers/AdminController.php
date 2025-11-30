@@ -11,7 +11,14 @@ class AdminController extends Conexion {
         $nombre =  isset($_POST['food_name']) ? $_POST['food_name'] : '';
         $precio = isset($_POST['price']) ? $_POST['price'] : '';
 
-        $img = $_FILES['food_image'];
+
+        $img = isset($_FILES['food_image']) ? $_FILES['food_image'] : '';
+
+        if ($nombre === '' || $precio === '' || $img === '' || $img['size'] <= 0) {
+            $error = 'No se ha ingresado los datos que son necesarios!';
+            require_once './src/views/createFood.php';
+            exit;
+        }
 
         $directorio = "src/uploads/";
         $rutaFinal = "";
